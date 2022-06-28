@@ -30,6 +30,8 @@ for(let i=0; i<5; i++){
 // presento el primer desafio . Es un simulador de prestamo
 
 
+/*
+
 alert("Hola Bienvenido, le ofrecemos un prestamo con la mejor tasa del mercado")
 
 alert("calcularemos el prestamo que usted necesita")
@@ -74,4 +76,113 @@ function prestamo_total(importe){
 }
 
 alert("la cantidad de cuotas elegida es  " + cuotas + "   teniendo que pagar una cuota mensual de   AR$"+  prestamo(importe) + "\n El importe total a pagar es de  :  "  + prestamo_total(importe));
+*/
 
+// Segunda Entrega Opcional
+
+
+// COntinuo con el proyecto del prestamo   
+
+class Prestamo{
+    constructor(id, nombre ,cuotas, tasa){
+        this.id = id;
+        this.nombre = nombre;
+        this.cuotas = parseInt(cuotas);
+        this.tasa = parseInt(tasa);
+    }
+
+    get_datos(){
+        alert("id: "+ " " + this.id + " " + " Nombre: " + " " + this.nombre + " "+ "Tasa de interes: " + " "+ this.tasa + "\n")
+    }
+
+
+
+
+}
+
+let prestamosARS = []
+
+let prestamo1 = new Prestamo(1,"Prestamos de 12 cuotas", 12, 30 );
+let prestamo2 = new Prestamo(2, "Prestamos de 24 cuotas", 24, 40 );
+let prestamo3 = new Prestamo(3, "Prestamos de 36 cuotas", 36, 50 );
+let prestamo4 = new Prestamo(4 , "Prestamos de 48 cuotas", 48, 60 );
+let prestamo5 = new Prestamo(5, "Prestamos de 100 cuotas", 100, 70 );
+
+
+prestamosARS.push(prestamo1);
+prestamosARS.push(prestamo2);
+prestamosARS.push(prestamo3);
+prestamosARS.push(prestamo4);
+prestamosARS.push(prestamo5);
+
+
+console.log(prestamosARS)
+
+
+// La idea es empezar a ofrecer prestamos en moneda extranjera
+let prestamosUsd = [];
+
+let prestamo6 = new Prestamo(6,"Prestamos de 12 cuotas", 12, 9);
+let prestamo7 = new Prestamo(7, "Prestamos de 15 cuotas", 15, 12 );
+let prestamo8 = new Prestamo(8, "Prestamos de 20 cuotas", 20, 15 );
+let prestamo9 = new Prestamo(9 , "Prestamos de 45 cuotas", 45, 19 );
+let prestamo10 = new Prestamo(10, "Prestamos de 50 cuotas", 50, 25 );
+
+prestamosUsd.push(prestamo6);
+prestamosUsd.push(prestamo7);
+prestamosUsd.push(prestamo8);
+prestamosUsd.push(prestamo9);
+prestamosUsd.push(prestamo10);
+console.log(prestamosUsd)
+
+alert("Bienvenidos- Le ofrecemos los siguientes prestamos en Pesos Argentinos")
+alert("1 - Prestamo de 12 cuotas, con una tasa de interes del 30% " + "\n "+ "2 - Prestamo de 24 cuotas, con una tasa de interes del 40% " + "\n" + "3 - Prestamo de 36 cuotas, con una tasa de interes del 50% "+ "\n "+ "4 - Prestamo de 48 cuotas, con una tasa de interes del 60% " + "\n" + "5 - Prestamo de 100 cuotas, con una tasa de interes del 70% ")
+
+
+let seleccion = prompt("De acuerdo a las opciones ofrecidas, seleccion el prestamo que mas le convenga")
+let importe = parseInt( prompt("Ahora ingrese el monto "))
+
+if(seleccion == 1){
+    let seleccion = prestamosARS[0];
+    function prestamos(importe){
+        return (importe * (1 + (seleccion.tasa / 100))) / seleccion.cuotas;
+        
+
+    };
+
+    alert(" ha seleccionado el siguiente tipo de prestamo  :" + " " + seleccion.nombre + " " +  "con una cantidad de cuotas :  "+ "  "+ seleccion.cuotas + " "+ " y un valor de cuota:  $"+ " "+ prestamos(importe))
+}
+
+else if(seleccion == 2){
+    let seleccion = prestamosARS[1];
+    function prestamos(importe){
+        return (importe * (1 + (seleccion.tasa / 100))) / seleccion.cuotas;
+
+    };
+    alert(" ha seleccionado el siguiente tipo de prestamo  :" + " " + seleccion.nombre + " " +  "con una cantidad de cuotas :  "+ "  "+ seleccion.cuotas + " "+ " y un valor de cuota:  $"+ " "+ prestamos(importe))
+}
+
+else if(seleccion == 3){
+    let seleccion = prestamosARS[2];
+    function prestamos(importe){
+        return (importe * (1 + (seleccion.tasa / 100))) / seleccion.cuotas;
+
+    };
+    alert(" ha seleccionado el siguiente tipo de prestamo  :" + " " + seleccion.nombre + " " +  "con una cantidad de cuotas :  "+ "  "+ seleccion.cuotas + " "+ " y un valor de cuota:  $"+ " "+ prestamos(importe))
+}
+else if(seleccion == 4){
+    let seleccion = prestamosARS[3];
+    function prestamos(importe){
+        return (importe * (1 + (seleccion.tasa / 100))) / seleccion.cuotas;
+
+    };
+    alert(" ha seleccionado el siguiente tipo de prestamo  :" + " " + seleccion.nombre + " " +  "con una cantidad de cuotas :  "+ "  "+ seleccion.cuotas + " "+ " y un valor de cuota:  $"+ " "+ prestamos(importe))
+}
+else if(seleccion == 5){
+    let seleccion = prestamosARS[4];
+    function prestamos(importe){
+        return (importe * (1 + (seleccion.tasa / 100))) / seleccion.cuotas;
+
+    };
+    alert(" ha seleccionado el siguiente tipo de prestamo  :" + " " + seleccion.nombre + " " +  "con una cantidad de cuotas :  "+ "  "+ seleccion.cuotas + " "+ " y un valor de cuota:  $"+ " "+ prestamos(importe))
+}
