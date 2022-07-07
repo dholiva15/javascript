@@ -60,7 +60,7 @@
 }
 .imagen_nav{
     width: 30% ;
-    height: 35%;
+    height: 30%;
     margin-top: 0%;
 }
 .carousel{
@@ -90,6 +90,8 @@
     grid-area: imagen1;
     margin-top: 20%;
     margin-left: 5%;
+    display: flex;
+    flex-direction: column;
     
 
 }
@@ -99,11 +101,17 @@
     
 }
 
+.boton1{
+    background-color: yellow;
+    color: blueviolet;
+}
 
 .imagen2{
     grid-area: imagen2;
     margin-top: 20%;
     margin-left: 5%;
+    display: flex;
+    flex-direction: column;
     
 
 }
@@ -112,12 +120,18 @@
     height: 75%;
     
 }
+.boton2{
+    background-color: orange;
+    color: blueviolet;
+}
 
 
 .imagen3{
     grid-area: imagen3;
     margin-top: 20%;
     margin-left: 5%;
+    display: flex;
+    flex-direction: column;
     
 
 }
@@ -127,10 +141,17 @@
     
 }
 
+.boton3{
+    background-color: lightcoral;
+    color: blueviolet;
+}
+
 .imagen4{
     grid-area: imagen4;
     margin-top: 20%;
     margin-left: 5%;
+    display: flex;
+    flex-direction: column;
     
 
 }
@@ -139,11 +160,16 @@
     height: 75%;
     
 }
-
+.boton4{
+    background-color: lightcoral;
+    color: green;
+}
 .imagen5{
     grid-area: imagen5;
     margin-top: 20%;
     margin-left: 5%;
+    display: flex;
+    flex-direction: column;
     
 
 }
@@ -152,8 +178,15 @@
     height: 75%;
     
 }
+.boton5{
+    background-color: blueviolet;
+    color: white;
+}
 
-
+.imagen{
+    width: 80%;
+    height: 75%;
+}
 
 .formulario{
     grid-area: formulario;
@@ -165,10 +198,16 @@
 }
 
 
+.formulario div{
+    margin-top: 25%;
+   color: blue;
+   font-size: 80px;}
 
 
-
-
+.botonc{
+    background-color: green;
+    color: red;
+}
 
 
 .footer{

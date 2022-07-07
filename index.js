@@ -2,16 +2,12 @@
 
 // Continuo con el proyecto del prestamo   
 
-class Prestamo{
-    constructor(id, nombre ,cuotas, tasa){
+class Viaje{
+    constructor(id, nombre ,precio){
         this.id = id;
         this.nombre = nombre;
-        this.cuotas = parseInt(cuotas);
-        this.tasa = parseInt(tasa);
-    }
-
-    get_datos(){
-        alert("id: "+ " " + this.id + " " + " Nombre: " + " " + this.nombre + " "+ "Tasa de interes: " + " "+ this.tasa + "\n")
+        this.precio = parseInt(precio);
+       
     }
 
 
@@ -19,87 +15,144 @@ class Prestamo{
 
 }
 
-let prestamosARS = []
+let viajeARG = []
 
-let prestamo1 = new Prestamo(1,"Prestamos de 12 cuotas", 12, 30 );
-let prestamo2 = new Prestamo(2, "Prestamos de 24 cuotas", 24, 40 );
-let prestamo3 = new Prestamo(3, "Prestamos de 36 cuotas", 36, 50 );
-let prestamo4 = new Prestamo(4 , "Prestamos de 48 cuotas", 48, 60 );
-let prestamo5 = new Prestamo(5, "Prestamos de 100 cuotas", 100, 80 );
-
-
-prestamosARS.push(prestamo1);
-prestamosARS.push(prestamo2);
-prestamosARS.push(prestamo3);
-prestamosARS.push(prestamo4);
-prestamosARS.push(prestamo5);
+let salta = new Viaje(1,"Viaje a Salta", 25000 );
+let cataratas = new Viaje(2, "Viaje a cataratas", 55000 );
+let potrerillo = new Viaje(3, "Viaje a potrerillo", 55000 );
+let ushuaia = new Viaje(4 , "Viaje a Ushuaia", 150000);
+let uco = new Viaje(5, "Viaje a Valle de uco", 45000 );
 
 
-console.log(prestamosARS)
+viajeARG.push(salta);
+viajeARG.push(cataratas);
+viajeARG.push(potrerillo);
+viajeARG.push(ushuaia);
+viajeARG.push(uco);
 
 
-// La idea es empezar a ofrecer prestamos en moneda extranjera
-let prestamosUsd = [];
+console.log(viajeARG);
 
-let prestamo6 = new Prestamo(6,"Prestamos de 12 cuotas", 12, 9);
-let prestamo7 = new Prestamo(7, "Prestamos de 15 cuotas", 15, 12 );
-let prestamo8 = new Prestamo(8, "Prestamos de 20 cuotas", 20, 15 );
-let prestamo9 = new Prestamo(9 , "Prestamos de 45 cuotas", 45, 19 );
-let prestamo10 = new Prestamo(10, "Prestamos de 50 cuotas", 50, 25 );
+// fijamos la posicion de objeto dentro del array
 
-prestamosUsd.push(prestamo6);
-prestamosUsd.push(prestamo7);
-prestamosUsd.push(prestamo8);
-prestamosUsd.push(prestamo9);
-prestamosUsd.push(prestamo10);
-console.log(prestamosUsd)
+let posicionSalta = viajeARG[0]
+let posicionCataratas = viajeARG[1]
+let posicionMendoza = viajeARG[2]
+let posicionUshuaia = viajeARG[3]
+let posicionUco = viajeARG[4]
 
-function prestamos(importe, seleccion){
-    return ((importe * (1 + (seleccion.tasa / 100))) / seleccion.cuotas)};
+console.log(posicionSalta)
+console.log(posicionSalta.precio)
+
+// tomamos el boton cotizar
+let cataratas1 = document.getElementById("cataratas");
+let salta1 = document.getElementById("salta");
+let mendoza1= document.getElementById("mendoza");
+let ushuaia1= document.getElementById("ushuaia");
+let uco1= document.getElementById("uco");
 
 
 
-function resultado(){
-
-    let importe =  document.getElementById("importe");
-    let cuotas =  document.getElementById("cuotas");
-    let mensaje = document.getElementById("mensaje");
-
-
-    if(cuotas.value == 12){
-    let posicion1 = prestamosARS[0];
-    let parrafo = document.createElement("p")
-    parrafo.innerText = `las cantidad de cuotas seleccionadas es  ${cuotas.value}, para un importe de $ ${ importe.value} se calcula una cuota de $ ${prestamos(importe.value, posicion1)}`;
-    mensaje.append(parrafo)}
-
-    if(cuotas.value == 24){
-        let posicion1 = prestamosARS[1];
-        let parrafo = document.createElement("p")
-        parrafo.innerText = `las cantidad de cuotas seleccionadas es  ${cuotas.value}, para un importe de $ ${ importe.value} se calcula una cuota de $ ${prestamos(importe.value, posicion1)}`;
-        mensaje.append(parrafo)}
-    
-    if(cuotas.value == 36){
-    let posicion1 = prestamosARS[2];
-    let parrafo = document.createElement("p")
-    parrafo.innerText = `las cantidad de cuotas seleccionadas es  ${cuotas.value}, para un importe de $ ${ importe.value} se calcula una cuota de $ ${prestamos(importe.value, posicion1)}`;
-    mensaje.append(parrafo)}
-
-    if(cuotas.value == 48){
-        let posicion1 = prestamosARS[3];
-        let parrafo = document.createElement("p")
-        parrafo.innerText = `las cantidad de cuotas seleccionadas es  ${cuotas.value}, para un importe de $ ${ importe.value} se calcula una cuota de $ ${prestamos(importe.value, posicion1)}`;
-        mensaje.append(parrafo)}
-
-        if(cuotas.value == 100){
-            let posicion1 = prestamosARS[4];
-            let parrafo = document.createElement("p")
-            parrafo.innerText = `las cantidad de cuotas seleccionadas es  ${cuotas.value}, para un importe de $ ${ importe.value} se calcula una cuota de $ ${prestamos(importe.value, posicion1)}`;
-            mensaje.append(parrafo)}
-        
     
 
+  
+
+// hice por cada boton una funcion. Quise hacer una funcion y llamarla por cada evenlistener de cada boton pero me escribia los 5 botones
+
+
+uco1.addEventListener("click", function (){
+
+    let pasa_uco = document.getElementById("pasa_uco");
+    let mensaje=document.getElementById("mensaje");
+    let parrafo = document.createElement("p");
+
+    parrafo.innerHTML = `El ${posicionUco.nombre} para la cantidad de   ${pasa_uco.value}, es de un importe de  $ ${ posicionUco.precio * pasa_uco.value} 
+    <button class = "borrar"> Borrar </button>`;
+    mensaje.append(parrafo)
+
+    let boton_borrar = document.querySelectorAll(".borrar");
+    console.log(boton_borrar)
+    for(let boton of boton_borrar){
+        boton.addEventListener("click", borrar_elementos)
+    }
+})
+
+ushuaia1.addEventListener("click", function (){
+
+    let pasa_ushuaia = document.getElementById("pasa_ushuaia")
+    let mensaje=document.getElementById("mensaje");
+    let parrafo = document.createElement("p");
+
+    parrafo.innerHTML = `El ${posicionUshuaia.nombre} para la cantidad de   ${pasa_ushuaia.value}, es de un importe de  $ ${ posicionUshuaia.precio * pasa_ushuaia.value} 
+    <button class = "borrar"> Borrar </button>`;
+    mensaje.append(parrafo)
+
+    let boton_borrar = document.querySelectorAll(".borrar");
+    console.log(boton_borrar)
+    for(let boton of boton_borrar){
+        boton.addEventListener("click", borrar_elementos)
+    }
+})
+
+mendoza1.addEventListener("click", function (){
+
+    let pasa_mendoza = document.getElementById("pasa_mendoza")
+    let mensaje=document.getElementById("mensaje");
+    let parrafo = document.createElement("p");
+
+    parrafo.innerHTML = `El ${posicionMendoza.nombre} para la cantidad de   ${pasa_mendoza.value}, es de un importe de  $ ${ posicionMendoza.precio * pasa_mendoza.value} 
+    <button class = "borrar"> Borrar </button>`;
+    mensaje.append(parrafo)
+
+    let boton_borrar = document.querySelectorAll(".borrar");
+    console.log(boton_borrar)
+    for(let boton of boton_borrar){
+        boton.addEventListener("click", borrar_elementos)
+    }
+})
+
+salta1.addEventListener("click", function (){
+
+    let pasa_salta = document.getElementById("pasa_salta")
+    let mensaje=document.getElementById("mensaje");
+    let parrafo = document.createElement("p");
+
+    parrafo.innerHTML = `El ${posicionSalta.nombre} para la cantidad de   ${pasa_salta.value}, es de un importe de  $ ${ posicionSalta.precio * pasa_salta.value} 
+    <button class = "borrar"> Borrar </button>`;
+    mensaje.append(parrafo)
+
+    let boton_borrar = document.querySelectorAll(".borrar");
+    console.log(boton_borrar)
+    for(let boton of boton_borrar){
+        boton.addEventListener("click", borrar_elementos)
+    }
+})
+
+cataratas1.addEventListener("click", function (){
+
+    let pasa_cataratas = document.getElementById("pasa_cataratas")
+    let mensaje=document.getElementById("mensaje");
+    let parrafo = document.createElement("p");
+
+    parrafo.innerHTML = `El ${posicionCataratas.nombre} para la cantidad de   ${pasa_cataratas.value}, es de un importe de  $ ${ posicionCataratas.precio * pasa_cataratas.value} 
+    <button class = "borrar"> Borrar </button>`;
+    mensaje.append(parrafo)
+
+    let boton_borrar = document.querySelectorAll(".borrar");
+    console.log(boton_borrar)
+    for(let boton of boton_borrar){
+        boton.addEventListener("click", borrar_elementos)
+    }
+})
 
 
 
 
-};
+function borrar_elementos(e){
+   let hijo = e.target;
+   let padre = hijo.parentNode
+
+   padre.remove()
+}
+
+//<button class = "borrar"> Borrar </button>
