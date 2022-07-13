@@ -84,12 +84,20 @@
    
  
  <!--  
-    
-  
-  
 
-  -->
-  <div class="card_body imagen1">
+
+
+  <div class="card" style="width: 18rem;">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+
+
+<div class="card_body imagen1">
     <h2>7 noches</h2>
     <img class="imagen" src="./img/Salta.png" alt="">
     <p>cantidad de pasajeros</p>
@@ -97,28 +105,44 @@
     
     <button class="boton1" id="salta">cotizar</button>
     
-    
-
 </div>
 
+
+  
+ -->
+
+ <div class="card_body imagen1">
+    <h2>Iruya</h2>
+    <img class="imagen" src="./img/Salta.png" alt="">
+    <p>cantidad de pasajeros</p>
+    <input type="text"  class="pasajeros" id="pasajeros_iruya">
+    <span class="precio">25000$</span>     
+    <button class="boton1 boton_compra" >cotizar</button>
+    
+</div>
+
+
+
+  
+
   <div class="card_body imagen2">
-    <h2>7 noches</h2>
+    <h2>Cataratas</h2>
     <img class="imagen" src="./img/Catartas.png" alt="">
     <p>cantidad de pasajeros</p>
-    <input type="text" id="pasa_cataratas">
-    
-    <button class="boton2" id="cataratas">cotizar</button>
+    <input type="text"  class="pasajeros" id="pasajeros_Cataratas">
+    <span class="precio">55000$</span>  
+    <button class="boton2 boton_compra" >cotizar</button>
     
     
 
 </div>  
   <div class="card_body imagen3">
-    <h2>7 noches</h2>
+    <h2>Potrerillo</h2>
     <img class="imagen" src="./img/Mendoza.png" alt="">
     <p>cantidad de pasajeros</p>
-    <input type="text" id="pasa_mendoza">
-    
-    <button class="boton3" id="mendoza">cotizar</button>
+    <input type="text"  class="pasajeros" id="pasajeros_Potrerillo">
+    <span class="precio">65000$</span>  
+    <button class="boton3 boton_compra" >cotizar</button>
     
     
 
@@ -127,12 +151,12 @@
 
 
   <div class="card_body imagen4">
-    <h2>8 noches</h2>
+    <h2>Ushuaia</h2>
     <img class="imagen" src="./img/Ushuaia.png" alt="">
     <p>cantidad de pasajeros</p>
-    <input type="text" id="pasa_ushuaia">
-    
-    <button class="boton4" id="ushuaia">cotizar</button>
+    <input type="text"  class="pasajeros" id="pasajeros_Ushuaia">
+    <span class="precio">150000$</span>  
+    <button class="boton4 boton_compra" >cotizar</button>
     
     
 
@@ -140,28 +164,44 @@
 
 
   <div class="card_body imagen5">
-    <h2>9 noches</h2>
+    <h2>Valle de Uco</h2>
     <img class="imagen" src="./img/Valle de uco.png" alt="">
     <p>cantidad de pasajeros</p>
-    <input type="text" id="pasa_uco">
-    
-    <button class="boton5" id="uco">cotizar</button>
+    <input type="text"  class="pasajeros" id="pasajeros_ValleUco">
+    <span class="precio">45000$</span>  
+    <button class="boton5 boton_compra" >cotizar</button>
     
     
 
 </div>
+<!--   
 
- 
-
-
-
-
+     <div class="formulario" id="mensaje"></div>
+     -->
 
 
+    <div class="container formulario" id="carrito">
+      <h2>Carrito</h2>
+      <table class="table table-dark">
+        <thead>
+          <tr>             
+            <td>Producto</td>
+            <td>Cantidad</td>
+            <td>Precio</td>
+            <td>Total</td>
+            <td></td>
+          </tr>
+        </thead>
+        <tbody id="tbody">
+         
+        </tbody>
+      </table>
+
+    </div>
+    
 
 
 
-    <div class="formulario" id="mensaje"></div>
 
 
     
