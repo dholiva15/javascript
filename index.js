@@ -16,12 +16,33 @@ class Viaje{
 }
 
 let viajeARG = []
+let viajeLatinoamerica = []
+let viajeEuropa = []
+let viajeAsia = []
+
 
 let iruya = new Viaje(1,"Viaje a Iruya", 25000 );
 let cataratas = new Viaje(2, "Viaje a Cataratas", 55000 );
 let potrerillo = new Viaje(3, "Viaje a Potrerillo", 65000 );
 let ushuaia = new Viaje(4 , "Viaje a Ushuaia", 150000);
 let uco = new Viaje(5, "Viaje a Valle de Uco", 45000 );
+let bariloche = new Viaje(6, "Viaje a Bariloche", 70000);
+let cumbrecita = new Viaje(7, "Viaje a La Cumbrecita", 45000);
+let sanrafael = new Viaje(8, "Viaje a San Rafael", 85000);
+let valleluna = new Viaje(9, "Viaje de la Luna", 76000);
+let calafate = new Viaje(10, "viaje al Calafate", 105000)
+let chalten = new Viaje (11, "viaje al Chalten", 145000);
+let potrero = new Viaje(12, "Viaje a Potrero de los Funes", 55000);
+let madryn = new Viaje(13, "Viaje a Puerto Madryn", 90000);
+let esquel = new Viaje(14, "Viaje a Esquel y Trevellin", 115000)
+
+console.log(iruya)
+
+
+
+// construir 5 viajes mas
+
+
 
 
 viajeARG.push(iruya);
@@ -29,31 +50,27 @@ viajeARG.push(cataratas);
 viajeARG.push(potrerillo);
 viajeARG.push(ushuaia);
 viajeARG.push(uco);
+viajeARG.push(bariloche);
+viajeARG.push(cumbrecita);
+viajeARG.push(sanrafael);
+viajeARG.push(valleluna);
+viajeARG.push(calafate);
+viajeARG.push(chalten);
+viajeARG.push(potrero);
+viajeARG.push(madryn);
+viajeARG.push(esquel);
 
 
-console.log(viajeARG);
-
-// fijamos la posicion de objeto dentro del array
-
-let posicionIruya = viajeARG[0]
-let posicionCataratas = viajeARG[1]
-let posicionPotrerillo = viajeARG[2]
-let posicionUshuaia = viajeARG[3]
-let posicionUco = viajeARG[4]
-
-console.log(posicionIruya)
-console.log(posicionIruya.precio)
 
 
-/*
 
 
-// tomamos el boton cotizar - Cambie el ID por una class en cada boton cotizar
-let cataratas1 = document.getElementById("cataratas");
-let salta1 = document.getElementById("salta");
-let mendoza1= document.getElementById("mendoza");
-let ushuaia1= document.getElementById("ushuaia");
-let uco1= document.getElementById("uco");*/
+// identificamos la posicion de objeto dentro del array- Desestructure un array
+
+let [viaje1, viaje2, viaje3, viaje4, viaje5] = viajeARG
+
+
+
 
 
 
@@ -87,10 +104,7 @@ function cotizar(e){
     
     
     
-    //let mensaje=document.getElementById("mensaje");   los dejo por si quiero enviar algun mensaje mas adelante
-   //let parrafo = document.createElement("p");
     
-
     if(nombre_viaje == "Iruya"){
 
 
@@ -99,7 +113,7 @@ function cotizar(e){
             nombre: nombre_viaje,        
             precio: precio,
             cantidad: pasajeros_iruya.value,
-            total : total(pasajeros_iruya.value,posicionIruya.precio )
+            total : total(pasajeros_iruya.value,viaje1.precio )
         };
 
         carrito.push(producto)
@@ -113,17 +127,6 @@ function cotizar(e){
         mostrar_carrito(producto);
 
 
-/*
-    parrafo.innerHTML = `El ${posicionIruya.nombre} para la cantidad de   ${pasajeros}, es de un importe de  $ ${ posicionIruya.precio * pasajeros_iruya.value} 
-    <button class = "borrar"> Borrar </button>`;
-    mensaje.append(parrafo)
-
-    let boton_borrar = document.querySelectorAll(".borrar");
-    console.log(boton_borrar)
-    for(let boton of boton_borrar){
-        boton.addEventListener("click", borrar_elementos)
-    }*/
-
     }
 
 
@@ -133,7 +136,7 @@ function cotizar(e){
         nombre: nombre_viaje,        
         precio: precio,
         cantidad: pasajeros_Cataratas.value,
-        total : total(pasajeros_Cataratas.value,posicionCataratas.precio )
+        total : total(pasajeros_Cataratas.value,viaje2.precio )
     };
 
     carrito.push(producto)
@@ -159,7 +162,7 @@ function cotizar(e){
         nombre: nombre_viaje,        
         precio: precio,
         cantidad: pasajeros_Potrerillo.value,
-        total : total(pasajeros_Potrerillo.value,posicionPotrerillo.precio )
+        total : total(pasajeros_Potrerillo.value,viaje3.precio )
     };
 
     carrito.push(producto)
@@ -184,7 +187,7 @@ function cotizar(e){
             nombre: nombre_viaje,        
             precio: precio,
             cantidad: pasajeros_Ushuaia.value,
-            total : total(pasajeros_Ushuaia.value,posicionUshuaia.precio )
+            total : total(pasajeros_Ushuaia.value,viaje4.precio )
         };
     
         carrito.push(producto)
@@ -206,7 +209,7 @@ function cotizar(e){
             nombre: nombre_viaje,        
             precio: precio,
             cantidad: pasajeros_ValleUco.value,
-            total : total(pasajeros_ValleUco.value,posicionUco.precio )
+            total : total(pasajeros_ValleUco.value,viaje5.precio )
         };
     
         carrito.push(producto)
@@ -263,82 +266,25 @@ function mostrar_carrito(producto){
 }
 
 
+let storage = sessionStorage.getItem("producto")
 
+console.log(storage)
 
-/*
+let mensaje = document.getElementById("mensaje")
+let parrafo = document.createElement("p");
 
+parrafo.innerHTML = `El ultimo viaje consultado es  ${ storage} 
+<button class = "borrar"> Borrar </button>`;
+mensaje.append(parrafo)
 
-function cotizar(e){
+let boton_borrar2 = document.querySelectorAll(".borrar");
+console.log(boton_borrar2)
+for(let boton of boton_borrar2){
+    boton.addEventListener("click", borrar_elementos2)
+}
+function borrar_elementos2(e){
     let hijo = e.target;
-    let padre = hijo.parentNode;
-    
-    
-    let nombre_viaje = padre.querySelector("h2").textContent;
-    let precio = padre.querySelector("span").textContent;
-    let pasajeros = (document.querySelectorAll(".pasajeros")).value
-
-  
-
-   
-
-    let producto = {
-        nombre: nombre_viaje,        
-        precio: precio,
-        cantidad: pasajeros,
-        total : total
-    };
-
-   
-    carrito.push(producto)
-    console.log(carrito)
-
-    let producto_JSON = JSON.stringify(producto)
-
-    carrito_storage.push(producto_JSON)
-    localStorage.setItem("producto", carrito_storage)
-
-    mostrar_carrito(producto);
-
-
-    
-
-        
-
-}
-
-
-
-function mostrar_carrito(producto){
-    let fila = document.createElement("tr");
-    fila.innerHTML= `
-                      <td>${producto.nombre}</td>
-                      <td>${producto.cantidad}</td>
-                      <td>${producto.precio}</td>
-                      <td>${producto.total}</td>
-
-                      <td><button class= "btn-danger borrar_elemento"> Borrar</td>`;
-    let body_tabla = document.getElementById("tbody");
-    body_tabla.append(fila)
-
-    let boton_borrar = document.querySelectorAll(".borrar_elemento")
-    for(let boton of boton_borrar){
-        boton.addEventListener("click", borrar_elementos);
-    }
-    
-
-}
-
-
-
-function borrar_elementos(e){
-   let hijo = e.target;
-   let abuelo = hijo.parentNode.parentNode
-
-   abuelo.remove()
-}
-
-
-//<button class = "borrar"> Borrar </button>
-
-
-*/
+    let abuelo = hijo.parentNode
+ 
+    abuelo.remove()
+ }

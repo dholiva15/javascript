@@ -12,12 +12,13 @@
 .divindex{
     display: grid;
     grid-template-columns: 20% 20% 20% 20% 20%;
-    grid-template-rows: 100px 170px 600px 500px 700px 120px;
+    grid-template-rows: 100px 170px 600px 500px 700px 350px 120px;
     grid-template-areas: "header1 header1 header1 header2 header2"
     "navbar navbar navbar navbar navbar"
     "carousel carousel carousel carousel carousel "    
     "imagen1 imagen2 imagen3 imagen4 imagen5 "
     "formulario formulario formulario formulario formulario"
+    "mensaje mensaje mensaje mensaje mensaje"
     "footer footer footer footer footer";
 
 }
@@ -217,4 +218,11 @@
     align-items: center;
     justify-content: space-evenly;
     
+}
+
+.mensaje{
+    grid-area: mensaje;
+    display: flex;
+    flex-direction: column;
+    margin-top: 25%;
 }
