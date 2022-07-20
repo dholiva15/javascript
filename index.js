@@ -126,6 +126,15 @@ function cotizar(e){
 
         mostrar_carrito(producto);
 
+        Swal.fire({
+            title: 'Excelente!',
+            text: 'Seleccionaste cotizar un viaje a Iruya, ',
+            imageUrl: 'https://tripin.travel/wp-content/uploads/2020/06/vista-aerea-iruya-fcbk-1024x538.jpg',
+            imageWidth: 400,
+            imageHeight: 200,
+            imageAlt: 'Custom image',
+          })
+
 
     }
 
@@ -148,6 +157,16 @@ function cotizar(e){
     localStorage.setItem("producto", carrito_storage)
 
     mostrar_carrito(producto);
+
+
+    Swal.fire({
+        title: 'En hora buena!',
+        text: 'Cotizaste para viajar a una de las 7 maravillas naturales del mundo ',
+        imageUrl: 'https://www.fundacionaquae.org/wp-content/uploads/2016/01/800px_iguacu-002.jpg.webp',
+        imageWidth: 400,
+        imageHeight: 200,
+        imageAlt: 'Custom image',
+      })
 
 
 
@@ -174,6 +193,14 @@ function cotizar(e){
     localStorage.setItem("producto", carrito_storage)
 
     mostrar_carrito(producto);
+    Swal.fire({
+        title: 'Es hora de ir a la Montaña',
+        text: 'Cotizaste Potrerillos Mendoza  ',
+        imageUrl: 'https://d3tf9yuhsp2bpn.cloudfront.net/images/2020/06/26/20200626-1593195900-cacheuta-y-potrerillos-desde-mendoza-tu-experiencia-3.jpg',
+        imageWidth: 400,
+        imageHeight: 200,
+        imageAlt: 'Custom image',
+      })
 
 
 
@@ -200,6 +227,17 @@ function cotizar(e){
     
         mostrar_carrito(producto);
 
+        Swal.fire({
+            title: 'Al fin del Mundo',
+            text: 'Cotizaste para conocer la ciudas mas Austral del mundo',
+            imageUrl: 'https://www.eltiempo.com/files/image_640_428/uploads/2022/05/14/6280662b1a91a.jpeg',
+            imageWidth: 400,
+            imageHeight: 200,
+            imageAlt: 'Custom image',
+          })
+
+
+
             
                 }
 
@@ -221,6 +259,15 @@ function cotizar(e){
         localStorage.setItem("producto", carrito_storage)
     
         mostrar_carrito(producto);
+
+        Swal.fire({
+            title: 'Vinos, Paisaje, Relax',
+            text: 'Cotizaste para ir a Mendoza y sus viñedos',
+            imageUrl: 'https://diariondi.com/wp-content/uploads/2020/05/Valle-del-Uco-Mendoza-768x434-1.jpg',
+            imageWidth: 400,
+            imageHeight: 200,
+            imageAlt: 'Custom image',
+          })
 
 
                 
