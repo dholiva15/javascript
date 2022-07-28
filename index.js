@@ -335,3 +335,83 @@ function borrar_elementos2(e){
  
     abuelo.remove()
  }
+
+
+ //Incorporamos FETCH
+
+ let climasalta= document.getElementById("climasalta")
+ let climamisiones = document.getElementById("climamisiones")
+ let climamendoza = document.getElementById("climamendoza")
+ let climaushuaia = document.getElementById("climaushuaia")
+ let climapotrerillos = document.getElementById("climapotrerillos")
+
+ fetch("https://api.openweathermap.org/data/2.5/weather?q=Salta&lang=es&units=metric&appid=c073ed940880847a3c69b1219f150080")
+     .then(response=>response.json())
+     .then(data=>{
+
+        console.log(data.main),
+        console.log("ciudad:", data.name)
+        console.log("clima :", data.weather[0].description)
+        console.log(" La MAX es : ", data.main.temp)
+
+        climasalta.innerHTML=`<p> Clima: ${data.weather[0].description} </p>`;
+
+
+     } )
+
+
+fetch("https://api.openweathermap.org/data/2.5/weather?q=Mendoza&lang=es&units=metric&appid=c073ed940880847a3c69b1219f150080")
+     .then(response=>response.json())
+     .then(data=>{
+
+        console.log(data.main),
+        console.log("ciudad:", data.name)
+        console.log("clima :", data.weather[0].description)
+        console.log(" La MAX es : ", data.main.temp)
+
+        climamendoza.innerHTML=`<p> Clima: ${data.weather[0].description} </p>`;
+
+
+     } )
+
+
+     fetch("https://api.openweathermap.org/data/2.5/weather?q=Potrerillos&lang=es&units=metric&appid=c073ed940880847a3c69b1219f150080")
+     .then(response=>response.json())
+     .then(data=>{
+
+        console.log(data.main),
+        console.log("ciudad:", data.name)
+        console.log("clima :", data.weather[0].description)
+        console.log(" La MAX es : ", data.main.temp)
+
+        climapotrerillos.innerHTML=`<p> Clima: ${data.weather[0].description} </p>`;
+
+
+     } )
+
+fetch("https://api.openweathermap.org/data/2.5/weather?q=Misiones&lang=es&units=metric&appid=c073ed940880847a3c69b1219f150080")
+     .then(response=>response.json())
+     .then(data=>{
+
+        console.log(data.main),
+        console.log("ciudad:", data.name)
+        console.log("clima :", data.weather[0].description)
+        console.log(" La MAX es : ", data.main.temp)
+
+        climamisiones.innerHTML=`<p> Clima: ${data.weather[0].description} </p>`;
+
+
+     } )
+fetch("https://api.openweathermap.org/data/2.5/weather?q=Ushuaia&lang=es&units=metric&appid=c073ed940880847a3c69b1219f150080")
+     .then(response=>response.json())
+     .then(data=>{
+
+        console.log(data.main),
+        console.log("ciudad:", data.name)
+        console.log("clima :", data.weather[0].description)
+        console.log(" La MAX es : ", data.main.temp)
+
+        climaushuaia.innerHTML=`<p> Clima: ${data.weather[0].description} </p>`;
+
+
+     } )
