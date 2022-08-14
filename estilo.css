@@ -11,15 +11,16 @@
 
 .divindex{
     display: grid;
-    grid-template-columns: 20% 20% 20% 20% 20%;
-    grid-template-rows: 100px 170px 600px 500px 700px 350px 120px;
-    grid-template-areas: "header1 header1 header1 header2 header2"
-    "navbar navbar navbar navbar navbar"
-    "carousel carousel carousel carousel carousel "    
-    "imagen1 imagen2 imagen3 imagen4 imagen5 "
-    "formulario formulario formulario formulario formulario"
-    "mensaje mensaje mensaje mensaje mensaje"
-    "footer footer footer footer footer";
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 100px 170px 350px 450px 450px 450px 400px 120px;
+    grid-template-areas: "header1 header1 header1 header2"
+    "navbar navbar navbar navbar "
+    "mensaje mensaje mensaje mensaje"    
+    "imagen1 imagen2 imagen3 imagen4 "    
+    "imagen5 imagen6 imagen7 imagen8 "
+    "imagen9 imagen10 imagen11 imagen12"
+    "formulario formulario formulario formulario"   
+    "footer footer footer footer ";
 
 }
 
@@ -89,13 +90,15 @@
 
 .imagen1{
     grid-area: imagen1;
-    margin-top: 20%;
-    margin-left: 5%;
+    margin-top: 10%;
+    margin-left: 2%;
+    margin-right: 2%;
     display: flex;
     flex-direction: column;
     
 
 }
+
 .imagen1 img{
     width: 80%;
     height: 75%;
@@ -103,14 +106,15 @@
 }
 
 .boton1{
-    background-color: yellow;
-    color: blueviolet;
+    background-color: rgba(255, 60, 0, 0.952);
+    color: white;
 }
 
 .imagen2{
     grid-area: imagen2;
-    margin-top: 20%;
-    margin-left: 5%;
+    margin-top: 10%;
+    margin-left: 2%;
+    margin-right: 2%;
     display: flex;
     flex-direction: column;
     
@@ -120,17 +124,19 @@
     width: 80%;
     height: 75%;
     
+    
 }
 .boton2{
-    background-color: orange;
-    color: blueviolet;
+    background-color: rgba(255, 60, 0, 0.952);
+    color: white;
 }
 
 
 .imagen3{
     grid-area: imagen3;
-    margin-top: 20%;
-    margin-left: 5%;
+    margin-top: 10%;
+    margin-left: 2%;
+    margin-right: 2%;
     display: flex;
     flex-direction: column;
     
@@ -143,14 +149,15 @@
 }
 
 .boton3{
-    background-color: lightcoral;
-    color: blueviolet;
+    background-color: rgba(255, 60, 0, 0.952);
+    color: white;
 }
 
 .imagen4{
     grid-area: imagen4;
-    margin-top: 20%;
-    margin-left: 5%;
+    margin-top: 10%;
+    margin-left: 2%;
+    margin-right: 2%;
     display: flex;
     flex-direction: column;
     
@@ -162,13 +169,15 @@
     
 }
 .boton4{
-    background-color: lightcoral;
-    color: green;
+    background-color: rgba(255, 60, 0, 0.952);
+    color: white;
 }
+
 .imagen5{
     grid-area: imagen5;
-    margin-top: 20%;
-    margin-left: 5%;
+    margin-top: 10%;
+    margin-left: 2%;
+    margin-right: 2%;
     display: flex;
     flex-direction: column;
     
@@ -180,19 +189,158 @@
     
 }
 .boton5{
-    background-color: blueviolet;
+    background-color: rgba(255, 60, 0, 0.952);
     color: white;
 }
+
+
+
+.imagen6{
+    grid-area: imagen6;
+    margin-top: 10%;
+    margin-left: 2%;
+    margin-right: 2%;
+    display: flex;
+    flex-direction: column;
+    
+
+}
+.imagen6 img{
+    width: 80%;
+    height: 75%;
+    
+}
+.boton6{
+    background-color: rgba(255, 60, 0, 0.952);
+    color: white;
+}
+
+.imagen7{
+    grid-area: imagen7;
+    margin-top: 10%;
+    margin-left: 2%;
+    margin-right: 2%;
+    display: flex;
+    flex-direction: column;
+    
+
+}
+.imagen7 img{
+    width: 80%;
+    height: 75%;
+    
+}
+.boton7{
+    background-color: rgba(255, 60, 0, 0.952);
+    color: white;
+}
+
+.imagen8{
+    grid-area: imagen8;
+    margin-top: 10%;
+    margin-left: 2%;
+    margin-right: 2%;
+    display: flex;
+    flex-direction: column;
+    
+
+}
+.imagen8 img{
+    width: 80%;
+    height: 75%;
+    
+}
+.boton8{
+    background-color: rgba(255, 60, 0, 0.952);
+    color: white;
+}
+
+
+.imagen9{
+    grid-area: imagen9;
+    margin-top: 10%;
+    margin-left: 2%;
+    margin-right: 2%;
+    display: flex;
+    flex-direction: column;
+    
+
+}
+.imagen8 img{
+    width: 80%;
+    height: 75%;
+    
+}
+
+
+
+.imagen10{
+    grid-area: imagen10;
+    margin-top: 10%;
+    margin-left: 2%;
+    margin-right: 2%;
+    display: flex;
+    flex-direction: column;
+    
+
+}
+.imagen img{
+    width: 80%;
+    height: 75%;
+    
+}
+
+
+
+.imagen11{
+    grid-area: imagen11;
+    margin-top: 10%;
+    margin-left: 2%;
+    margin-right: 2%;
+    display: flex;
+    flex-direction: column;
+    
+
+}
+.imagen8 img{
+    width: 80%;
+    height: 75%;
+    
+}
+
+
+.imagen12{
+    grid-area: imagen12;
+    margin-top: 10%;
+    margin-left: 2%;
+    margin-right: 2%;
+    display: flex;
+    flex-direction: column;
+    
+
+}
+.imagen8 img{
+    width: 80%;
+    height: 75%;
+    
+}
+
+
+
+
+
 
 .imagen{
     width: 80%;
     height: 75%;
+    align-content: center;
 }
 
 .formulario{
     grid-area: formulario;
     display: flex;
     flex-direction: column;
+    margin-top: 11%;
 
     margin-left: 25%;
     margin-right: 25%;
@@ -205,6 +353,13 @@
    font-size: 80px;}
 
 
+.botonComprar{
+    color: white;
+    font-weight: 500;
+    background-color: black;
+    font-size: 20px;
+    margin-left: 73%;
+}
 .botonc{
     background-color: green;
     color: red;
@@ -222,12 +377,44 @@
 
 .mensaje{
     grid-area: mensaje;
+    color: black;
     display: flex;
+    font-size: 20px;
+    font-weight: bold;
     flex-direction: column;
-    margin-top: 25%;
+    margin-top: 10%;
+    margin-bottom: 10%;
 }
 
 .colorclima{
     color: red;
-    font-weight: 300;
+    font-weight: 700;
+    
+    font-size: x-large;
+}
+
+.titulo{
+
+    display: flex;
+    flex-direction: center;
+    color: rgb(90, 85, 85);
+    justify-content: center;
+}
+
+
+/* formulario */
+
+.divformulario{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 100px 170px 250px 450px 450px 450px  400px 120px;
+    grid-template-areas: "header1 header1 header1 header2"
+    "navbar navbar navbar navbar "
+    "mensaje mensaje mensaje mensaje"    
+    "imagen1 imagen2 imagen3 imagen4 "    
+    "imagen5 imagen6 imagen7 imagen8 "
+    "imagen9 imagen10 imagen11 imagen12"
+    "formulario formulario formulario formulario"   
+    "footer footer footer footer ";
+
 }
