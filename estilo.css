@@ -56,6 +56,7 @@
     text-decoration: none;
     color: white;
 }
+
 .navbar{
     grid-area: navbar;
     
@@ -402,19 +403,54 @@
 }
 
 
-/* formulario */
+/* trabajamos con el html formulario*/
+
 
 .divformulario{
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
-    grid-template-rows: 100px 170px 250px 450px 450px 450px  400px 120px;
-    grid-template-areas: "header1 header1 header1 header2"
-    "navbar navbar navbar navbar "
-    "mensaje mensaje mensaje mensaje"    
-    "imagen1 imagen2 imagen3 imagen4 "    
-    "imagen5 imagen6 imagen7 imagen8 "
-    "imagen9 imagen10 imagen11 imagen12"
-    "formulario formulario formulario formulario"   
+    grid-template-rows: 100px 170px 700px 120px;
+    grid-template-areas: "headerformulario headerformulario headerformulario headerformulario2"
+    "navbarformulario navbarformulario navbarformulario navbarformulario "
+    "formulario1 formulario1 formulario1 formulario1"   
     "footer footer footer footer ";
 
 }
+
+
+.headerformulario2{
+    grid-area: headerformulario2;
+}
+
+.headerformulario{
+    grid-area: headerformulario;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    color: red;
+}
+
+.navbarformulario{
+    grid-area: navbarformulario;
+    
+    
+}
+
+
+.imagen_nav_formulario{
+    width: 20% ;
+    height: 20%;
+    margin-top: 0%;
+}
+.formulario1{
+    grid-area: formulario1;
+    margin-top: 15%;
+}
+
+.footerformulario{
+    grid-area: footerformulario;
+}
+

@@ -1,6 +1,6 @@
 
 
-// Continuo con el proyecto del prestamo   
+// creamos los objetos y arrays
 
 class Viaje{
     constructor(id, nombre ,precio){
@@ -39,7 +39,7 @@ console.log(iruya)
 
 
 
-// construir 5 viajes mas
+
 
 
 
@@ -69,7 +69,8 @@ let [viaje1, viaje2, viaje3, viaje4, viaje5,viaje6, viaje7, viaje8, viaje9, viaj
 
 
 
-
+// nos conectamos con nuestro HTML
+// la idea es que crear un boton que me cotice de acuerdo a la cantidad de pasajeros
 
 
 
@@ -484,6 +485,8 @@ function cotizar(e){
 
 }
 
+// creamos la funcion para el boton borrar del carrito de compras
+
 function borrar_elementos(e){
     let hijo = e.target;
     let abuelo = hijo.parentNode.parentNode
@@ -499,7 +502,7 @@ function borrar_elementos(e){
 }
 
 
-
+//funcion del carrito de compras
 
 
 function mostrar_carrito(producto){

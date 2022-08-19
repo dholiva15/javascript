@@ -13,47 +13,117 @@
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@1,500&family=Indie+Flower&family=Quintessential&family=Rowdies:wght@300;400;700&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.23/dist/sweetalert2.all.min.js"></script>
 </head>
-<body class="divindex"> 
+<body class="divformulario"> 
 
-    <header class="header1"> 
+    <header class="headerformulario"> 
        
      <h1 class="animate__animated animate__tada titulo_olbepo">OLBEPO</h1>
      <p class="titulo_olbepo1">Los mejores viajes</p>
  
      </header>
  
-     <a href="" class="logo"> <i class="bi bi-door-open header2">  </i></a>
+     <a href="" class="logo"> <i class="bi bi-door-open headerformulario1">  </i></a>
       
-   <nav class="navbar navbar-expand-lg navbar-light navBarra bg-danger sticky-top">
-           <div class="container ">
-             <a class="navbar-brand" href="../index.html"><img class="imagen_nav"  src="../img/LOGOVIAJES.png"  alt=""></a>
-             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-               <span class="navbar-toggler-icon"></span>
-             </button>
-             <div class="collapse navbar-collapse" id="navbarNavDropdown">
-               <ul class="navbar-nav">
-                 <li class="nav-item ">
-                   <a class="nav-link active " aria-current="page" href="../index.html">Home</a>
-                 </li>
-                 <li class="nav-item ">
-                   <a class="nav-link" href=>viaje Nacional</a>
-                 </li>
-                 <li class="nav-item">
-                   <a class="nav-link" href=>Viajes a Latinoamerica - PROXIMAMENTE</a>
-                 </li>
-                 <li class="nav-item">
-                   <a class="nav-link" href=>Viajes a Europa y Asia -  PROXIMAMENTE</a>
-                 </li>
-                 <li class="nav-item">
-                   <a class="nav-link" href=>Contactános</a>
-                 </li>
+      
+     <nav class="navbarformulario navbar-expand-lg navbar-light navBarra bg-danger sticky-top">
+      <div class="container ">
+        <a class="navbar-brand" href="../index.html"><img class="imagen_nav_formulario"  src=""  alt=""></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item ">
+              <a class="nav-link active " aria-current="page" href="../index.html">Home</a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link" href=>viaje Nacional</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href=>Viajes a Latinoamerica - PROXIMAMENTE</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href=>Viajes a Europa y Asia -  PROXIMAMENTE</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href=>Contactános</a>
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+
+
+
+
+         <form class="row g-3 needs-validation formulario1" novalidate>
+          <div class="col-md-4">
+            <label for="validationCustom01" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="validationCustom01" value="Nombre" required>
+            <div class="valid-feedback">
+            
+            </div>
+          </div>
+          <div class="col-md-4">
+            <label for="validationCustom02" class="form-label">Apellido</label>
+            <input type="text" class="form-control" id="validationCustom02" value="Apellido" required>
+            <div class="valid-feedback">
+             
+            </div>
+          </div>
+          <div class="col-md-4">
+            <label for="validationCustomUsername" class="form-label">Ingrese el email</label>
+            <div class="input-group has-validation">
+              <span class="input-group-text" id="inputGroupPrepend">@</span>
+              <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+              <div class="invalid-feedback">
                 
-               </ul>
-             </div>
-           </div>
-         </nav>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <label for="validationCustom03" class="form-label">Destino elegido</label>
+            <input type="text" class="form-control" id="validationCustom03" required>
+            <div class="invalid-feedback">
+              .
+            </div>
+          </div>
+          <div class="col-md-3">
+            <label for="validationCustom04" class="form-label">Ingrese su celular</label>
+            <input type="text" class="form-control" id="validationCustom02" value="celular" required>
+            </div>
+          </div>
+          
+          <div class="col-12">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+              <label class="form-check-label" for="invalidCheck">
+                esta de acuerdo a que lo contactemos
+              </label>
+              <div class="invalid-feedback">
+                
+              </div>
+            </div>
+          </div>
+          <div class="col-12">
+            <button class="btn btn-primary" type="submit">Enviar formulario</button>
+          </div>
+        </form>
  
 
+
+
+
+         <footer class="footerformulario">
+ 
+          <p>Olbepo &copy; es una marca de Argentina 2022 Todos los derechos reservados.</p>
+          <div class="iconos">    
+          <i class="bi bi-facebook"></i>  <i class="bi bi-whatsapp"></i>
+          <i class="bi bi-twitter"></i>  <i class="bi bi-youtube"></i>
+        </div> 
+      </footer>
     
 
  
